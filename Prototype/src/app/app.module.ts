@@ -7,26 +7,36 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {TabsPage} from "../pages/tabs/tabs";
+import {RandomFilmProvaider} from "../providers/randomFilm-provider";
+import {HttpModule} from "@angular/http";
+import {FilmInfoPage} from "../pages/filmInfo/filmInfo";
+import {WatchlistPage} from "../pages/watchlist/watchlist";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    TabsPage
+    TabsPage,
+    FilmInfoPage,
+    WatchlistPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    TabsPage
+    TabsPage,
+    FilmInfoPage,
+    WatchlistPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    RandomFilmProvaider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
