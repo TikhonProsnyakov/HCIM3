@@ -1,7 +1,9 @@
 import {Http} from "@angular/http";
 import {Injectable} from "@angular/core";
 import 'rxjs/add/operator/map';
-
+/**
+ * http provider. liest Daten aus asserts/someFilms.json
+ */
 @Injectable()
 export class RandomFilmProvaider{
 
