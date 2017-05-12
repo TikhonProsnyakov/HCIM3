@@ -28,8 +28,8 @@ export class FilmInfoPage {
         result => {
           this.Data = result;
         },
-        err => console.error("Error : "+err),
-        () => this.loading.dismiss()
+        err => console.error("Error : "+err)//,
+        //() => this.loading.dismiss()
     );
 
     // TODO Add to history list

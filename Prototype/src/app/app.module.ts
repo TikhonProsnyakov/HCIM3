@@ -11,6 +11,8 @@ import {RandomFilmProvaider} from "../providers/randomFilm-provider";
 import {HttpModule} from "@angular/http";
 import {FilmInfoPage} from "../pages/filmInfo/filmInfo";
 import {WatchlistPage} from "../pages/watchlist/watchlist";
+import {HttpProvider} from "../providers/http-provider";
+import {HistoryPage} from "../pages/history/history";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import {WatchlistPage} from "../pages/watchlist/watchlist";
     HomePage,
     TabsPage,
     FilmInfoPage,
-    WatchlistPage
+    WatchlistPage,
+    HistoryPage
   ],
   imports: [
     BrowserModule,
@@ -31,12 +34,14 @@ import {WatchlistPage} from "../pages/watchlist/watchlist";
     HomePage,
     TabsPage,
     FilmInfoPage,
-    WatchlistPage
+    WatchlistPage,
+    HistoryPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     RandomFilmProvaider,
+    HttpProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
