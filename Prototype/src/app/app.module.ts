@@ -13,6 +13,8 @@ import {FilmInfoPage} from "../pages/filmInfo/filmInfo";
 import {WatchlistPage} from "../pages/watchlist/watchlist";
 import {HttpProvider} from "../providers/http-provider";
 import {HistoryPage} from "../pages/history/history";
+import {StorageService} from "../services/storage.service";
+import {PosterComponent} from "../pages/watchlist/poster.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {HistoryPage} from "../pages/history/history";
     TabsPage,
     FilmInfoPage,
     WatchlistPage,
-    HistoryPage
+    HistoryPage,
+    PosterComponent
   ],
   imports: [
     BrowserModule,
@@ -35,14 +38,17 @@ import {HistoryPage} from "../pages/history/history";
     TabsPage,
     FilmInfoPage,
     WatchlistPage,
-    HistoryPage
+    HistoryPage,
+    PosterComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
     RandomFilmProvaider,
     HttpProvider,
+    StorageService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ],
+  exports: [PosterComponent]
 })
 export class AppModule {}

@@ -12,7 +12,10 @@
     <ion-row>
       <ion-col col-4>
         <ion-row><img  src="{{getInfoField('Poster')}}"></ion-row>
-        <ion-row><button ion-button (click)="addToWatchlist()">Add to watchlist</button></ion-row>
+        <ion-row>
+          <button *ngIf="!isAdded" ion-button (click)="addToWatchlist(getInfoField('Title'), getInfoField('ID'), getInfoField('Poster'))">Add to watchlist</button>
+          <button *ngIf="isAdded" ion-button (click)="deleteFromWatchlist()">Remove from watchlist</button>
+        </ion-row>
       </ion-col>
       <ion-col col-8="">
         <ion-row>
