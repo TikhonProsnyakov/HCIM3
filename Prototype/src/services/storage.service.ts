@@ -16,7 +16,9 @@ export class StorageService {
   }
 
   pushHistory(id: string, name: string, poster: string){
-    this.history.push({name: name, id: id, poster: poster});
+    if (!this.history.some(film => film.id == (id))){
+      this.history.push({name: name, id: id, poster: poster});
+    };
   }
 
   getWatchList(){

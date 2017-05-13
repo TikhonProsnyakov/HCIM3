@@ -7,17 +7,16 @@
 </ion-header>
 
 <ion-content padding>
-  <p>Info Page</p>
   <ion-grid>
     <ion-row>
-      <ion-col col-4>
+      <ion-col col-5>
         <ion-row><img  src="{{getInfoField('Poster')}}"></ion-row>
         <ion-row>
-          <button *ngIf="!isAdded" ion-button (click)="addToWatchlist(getInfoField('Title'), getInfoField('ID'), getInfoField('Poster'))">Add to watchlist</button>
+          <button *ngIf="!isAdded" ion-button (click)="addToWatchlist(getInfoField('Title'), getInfoField('ID'), getInfoField('Poster'))">To watchlist</button>
           <button *ngIf="isAdded" ion-button (click)="deleteFromWatchlist()">Remove from watchlist</button>
         </ion-row>
       </ion-col>
-      <ion-col col-8="">
+      <ion-col col-7>
         <ion-row>
           <ion-col><b>Title:</b></ion-col>
           <ion-col>{{getInfoField("Title")}}</ion-col>
@@ -49,31 +48,31 @@
       <button  *ngIf="detailedView === true" ion-button outline (click)="showLess()">Show less</button>
     </ion-row>
     <ion-row *ngIf="detailedView === true">
-      <ion-row>
+      <ion-row col-12>
         <ion-col col-4><b>Release date</b></ion-col>
         <ion-col col-8>{{getInfoField("Released")}}</ion-col>
       </ion-row>
-      <ion-row>
+      <ion-row col-12>
         <ion-col col-4><b>Production</b></ion-col>
         <ion-col col-8>{{getInfoField("Production")}}</ion-col>
       </ion-row>
-      <ion-row>
+      <ion-row col-12>
         <ion-col col-4><b>Awards</b></ion-col>
         <ion-col col-8>{{getInfoField("Awards")}}</ion-col>
       </ion-row>
-      <ion-row>
+      <ion-row col-12>
         <ion-col col-4><b>Actors</b></ion-col>
         <ion-col col-8>{{getInfoField("Actors")}}</ion-col>
       </ion-row>
-      <ion-row>
+      <ion-row col-12>
         <ion-col col-4><b>Metascore: </b></ion-col>
         <ion-col col-8>{{getInfoField("Metascore")}}</ion-col>
       </ion-row>
-      <ion-row>
+      <ion-row col-12>
         <ion-col col-4><b>Box Office: </b></ion-col>
         <ion-col col-8>{{getInfoField("BoxOffice")}}</ion-col>
       </ion-row>
-      <ion-row>
+      <ion-row col-12>
         <ion-col col-4><b>Plot</b></ion-col>
         <ion-col col-8>{{getInfoField("Plot")}}</ion-col>
       </ion-row>

@@ -7,5 +7,5 @@
 </ion-header>
 
 <ion-content padding>
-  <p>History</p>
+  <history-item (click)="showInfo(item.id)" *ngFor="let item of _storage.getHistory()" [item]="item" ></history-item>
 </ion-content>

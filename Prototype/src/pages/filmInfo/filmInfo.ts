@@ -30,11 +30,11 @@ export class FilmInfoPage {
     this.httpProvider.getJsonData(this.id).subscribe(
       result => {
         this.Data = result;
+        this._storage.pushHistory(this.id, this.Data["Title"], this.Data["Poster"]);
       },
       err => console.error("Error : "+err)//,
       //() => this.loading.dismiss()
     );
-
     this.isAdded = this._storage.isAddedToWatchlist(this.id);
   }
 

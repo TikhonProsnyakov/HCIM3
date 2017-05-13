@@ -15,6 +15,7 @@ import {HttpProvider} from "../providers/http-provider";
 import {HistoryPage} from "../pages/history/history";
 import {StorageService} from "../services/storage.service";
 import {PosterComponent} from "../pages/watchlist/poster.component";
+import {HistoryItemComponent} from "../pages/history/historyItem.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {PosterComponent} from "../pages/watchlist/poster.component";
     FilmInfoPage,
     WatchlistPage,
     HistoryPage,
-    PosterComponent
+    PosterComponent,
+    HistoryItemComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import {PosterComponent} from "../pages/watchlist/poster.component";
     FilmInfoPage,
     WatchlistPage,
     HistoryPage,
-    PosterComponent
+    PosterComponent,
+    HistoryItemComponent
   ],
   providers: [
     StatusBar,
